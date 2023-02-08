@@ -1,0 +1,131 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header{
+    background: #eee;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    max-width: 100px;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    padding: 0 1rem;
+}
+
+h1{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+h2{
+    text-align: center;
+    border-top: 4px #eee solid;
+    padding-top: 1.5rem;
+}
+
+.container{
+    max-width: 1076px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 3rem 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  /*.flex4{
+    order: -1;
+  }*/
+
+
+  /*.flex-item:nth-of-type(1) { order: 3; }
+  .flex-item:nth-of-type(2) { order: 4; }
+  .flex-item:nth-of-type(3) { order: 1; }
+  .flex-item:nth-of-type(4) { order: 5; }
+  .flex-item:nth-of-type(5) { order: 2; }*/
+
+  
+
+  /* flex item styles (non-layout) */
+  .flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 350px;
+    margin: 5px;
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  /* flex-grow */
+  .flex1, .flex2, .flex3, .flex4{
+    flex-grow: 1;
+  }
+
+  .flex2-5{
+    flex-grow: 2;
+  }
+
+  /* With Content */
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  .flex-container2{
+    padding: 3rem;
+    margin: 0;
+    background: #eee;
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    gap: 2rem;
+    
+    height: 50vh;
+    align-items:center;
+
+  }
+
+  .flex-container2 li{
+    flex: 0 1 30%;
+  }
+
+  a{
+    background: tomato;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover{
+    background: black;
+  }
+
+  /*@media screen and (max-width: 752px){
+    .flex-container2 li{
+        flex: 0 1 100%;
+      }
+  }*/

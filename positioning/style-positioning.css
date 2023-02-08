@@ -1,0 +1,189 @@
+html{
+    font-size: 1rem;
+}
+body{
+    margin: 0;
+    font-family: "source sans pro", helvetica, sans-serif;
+    width: 100%;
+}
+
+/* z-index with sticky header */
+header{
+    background-color: #eee;
+    padding: 2rem 0;
+    position: static;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+#logo img{
+    max-width: 100px;
+    padding-left: 2rem;
+}
+
+#logo{
+    float: left;
+}
+
+nav{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 1rem 2rem 0 2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: teal;
+}
+
+.clear{
+    clear: both;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1{
+    text-align: center;
+    font-size:3rem;
+   /* position: absolute;*/
+}
+main > h2{
+    text-align: center;
+    font-weight: 100;
+}
+
+.kitties{
+    margin-top: 3rem;
+}
+
+.kitties img{
+    display: inline-block;
+    max-width: 33%;
+}
+
+.content h2{
+    text-align: center;
+    position: relative;
+    top: 2rem;
+}
+
+.content div{
+    padding-top: 3rem;
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+.content p:first-child{
+    margin-top: 0;
+}
+
+figure{
+    margin: 0;
+}
+
+figure img{
+    max-width: 100%;
+}
+
+/*.fixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: teal;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}*/
+
+/* Position Absolute Example */
+.position-practice{
+    padding-top: 3rem;
+    position: relative;
+}
+
+figcaption{
+    position: absolute;
+    padding: 3rem;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: rgba(235,235,235,0.7);
+}
+
+/* relative positioning example with psuedoselector */
+figcaption h3::before{
+    content: url(eye-icon.png);
+    width: 60px;
+    height: 60px;
+    display:block;
+    margin: 0 auto;
+    position: relative;
+    top: -1.8rem;
+}
+
+figcaption a{
+    background: teal;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    display:block;
+    text-align: center;
+}
+
+figcaption a:hover{
+    background: black;
+    color: white;
+}
+
+/* demo sticky footer */
+footer{
+    background: black;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+    /*position: sticky; 
+    bottom: 0;*/
+}
+
+/* sticky image */
+
+.sticky-image img{
+    position: sticky;
+    width: 300px;
+    top: 0;
+    display: block;
+    margin: 0 auto;
+    padding-top: 2rem;
+    transform: scaleX(-1);
+}
+
+.sticky-image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.sticky-image div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-right: 3rem;
+}
