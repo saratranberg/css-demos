@@ -1,7 +1,3 @@
-*{
-    font-size: 1rem;
-}
-
 html{
     font-size: 1rem;
 }
@@ -11,29 +7,33 @@ body{
     width: 100%;
 }
 
-/* z-index with sticky header */
+/* z-index with sticky header --
+notice sticky holds it's place in
+the document and doesn't stick until
+it reaches the top of the viewport 
+
+add a z-index with a positive value
+to fix the issue with it going under
+other elements when scrolling.
+
+*/
 header{
     background-color: #eee;
     padding: 2rem 0;
-    position: static;
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;
 }
 
-
+#header-container{
+    display: flex;
+    justify-content: space-between;
+}
 
 #logo img{
     max-width: 100px;
     padding-left: 2rem;
-}
-
-#logo{
-    float: left;
-}
-
-nav{
-    float: right;
 }
 
 nav ul li{
@@ -52,10 +52,6 @@ nav ul li a:hover{
     color: teal;
 }
 
-.clear{
-    clear: both;
-}
-
 main{
     max-width: 1200px;
     margin: 0 auto;
@@ -67,9 +63,16 @@ h1{
     font-size:3rem;
    /* position: absolute;*/
 }
+
+/* try positioning the h2 relative and
+moving it with top, right, bottom and left.
+notice how it's movement doesn't effect the 
+position of other elements. */
 main > h2{
     text-align: center;
     font-weight: 100;
+ /* position: relative;
+    top: 4rem; */
 }
 
 .kitties{
@@ -105,6 +108,11 @@ figure img{
     max-width: 100%;
 }
 
+/* Remove the comment below to see how the fixed
+button behaves. notice it stays to the same
+position regardless of viewport size. it is
+always visible */
+
 /*.fixed{
     position: fixed;
     bottom: 0;
@@ -115,7 +123,13 @@ figure img{
     padding: 1rem;
 }*/
 
-/* Position Absolute Example */
+/* Position Absolute Example - in almost every
+use-case, the element that is positioned as 
+absolute will be inside a container that is 
+positioned relative. The absolute element can
+then be positioned in relation to the size
+of it's parent with top, right, bottom and left */
+
 .position-practice{
     padding-top: 3rem;
     position: relative;
@@ -129,7 +143,10 @@ figcaption{
     background-color: rgba(235,235,235,0.7);
 }
 
-/* relative positioning example with psuedoselector */
+/* relative positioning example with psuedoselector
+if you aren't sure what this does, open in 
+browser developer tools and uncheck the position
+and/or the top: -1.8em value */
 figcaption h3::before{
     content: url(eye-icon.png);
     width: 60px;
@@ -165,7 +182,7 @@ footer{
     bottom: 0;*/
 }
 
-/* sticky image */
+/* sticky image example*/
 
 .sticky-image img{
     position: sticky;
