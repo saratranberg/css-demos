@@ -87,10 +87,13 @@ flexbox properties here & see what happens! :D */
 
   .flex2-5{
     flex-grow: 2;
+    width: 100%;
   }
 
   /* Example that shows with content */
 
+
+  /* Important for images to scale */
   img{
     width: 100%;
     height: auto;
@@ -101,7 +104,7 @@ flexbox properties here & see what happens! :D */
     margin: 0;
     background: #eee;
     list-style: none;
-    height: 50vh;
+    min-height: 50vh;
 
     display: flex;
     flex-flow: row wrap;
@@ -127,8 +130,9 @@ flexbox properties here & see what happens! :D */
     background: black;
   }
 
-  /*@media screen and (max-width: 768px){
+/* Media Querie for Mobile sizes -- 768px and under */
+ @media screen and (max-width: 768px){
     .flex-container2 li{
         flex: 0 1 100%;
       }
-  }*/
+  }
